@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Text Effect with Image Reveal</title>
+    <link rel="stylesheet" href="0.start.css">
+</head>
+<body>
+    <div class="typewriter">
+        <p id="typed-text"></p>
+    </div>
+    <a id="image-link" href="Home.html" target="_blank">
+        <img id="image" src="fd.png" 
+             onmouseover="this.classList.add('hover'); this.src='ofd.png'" 
+             onmouseout="this.classList.remove('hover'); this.src='fd.png'"> 
+    </a>
+    
+    <div id="loading" style="display: none;">
+        <p id="loading-text"></p> <!-- Loading... 텍스트가 이곳에 나타날 것입니다 -->
+    </div>    
+
+    <script src="0.start.js"></script>
+</body>
+</html>
