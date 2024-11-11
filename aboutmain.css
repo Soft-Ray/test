@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    cursor: url('Group.png'), auto;
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: #000000;
+    color: #7CFC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.aboutbox {
+    width: 1530px;
+    height: 880px;
+    border: 5px solid #7CFC00;
+    background: #0C1900;
+    text-align: center;
+    border-top: 80px #7CFC00 solid;
+    position: absolute; /* 화면 내에서 절대 위치 조정 */
+    left: 50px; /* 초기 위치 */
+    top: 50px; /* 초기 위치 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.navbar {
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.navbar h1 {
+    color: #000000; /* Change the font color to black */
+    font-size: 45px;
+    margin-left: 20px;
+    font-weight: 100;
+}
+
+.icon-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.icon-nav li {
+    margin: 0 10px; /* 아이콘 사이 간격 조정 */
+}
+
+.icon-nav li a img {
+    width: 40px; /* 아이콘 크기 조정 */
+    height: 40px;
+}
+
+.content {
+    text-align: left;
+}
+
+.name {
+    font-size: 80px;
+    margin-bottom: 120px;
+}
+
+.detail {
+    font-size: 50px;
+    margin-bottom: 100px;
+    line-height: 60px;
+}
+
+.detail a {
+    position: relative; /* 사각형을 뒤에 배치할 수 있도록 설정 */
+}
+
+.detail a:hover::after {
+    content: ''; /* 사각형 추가 */
+    position: absolute;
+    left: -26px; /* .albert2 경계에 맞추기 위해 조정 */
+    bottom: 0;
+    width: 1530px; /* 링크 가로 길이에 맞게 설정 */
+    height: 55px; /* 사각형 높이 */
+    background-color: rgba(124, 252, 0, 0.2); /* 연한 초록색 사각형 배경 */
+    z-index: 0; /* 텍스트 뒤로 배치 */
+}
+
+.manual {
+    font-size: 36px;
+    margin-bottom: 100px;
+    line-height: 46px;
+}
+
+.load {
+    font-size: 36px;
+    display: none;
+}
+
+a:link {
+    color : #7CFC00;
+    text-decoration: none;
+}
+a:visited {
+    color : #7CFC00;
+    text-decoration: none;
+}
+a:hover {
+    color : #7CFC00;
+    text-decoration: none;
+    scrollbar-highlight-color: #7CFC00;
+}
+a:active {
+    color : #7CFC00;
+    text-decoration: none;
+}

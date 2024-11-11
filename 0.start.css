@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    cursor: url('Group.png'), auto; /* 커스텀 커서 적용 */
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* 전체 화면 높이로 조정 */
+    margin: 0; /* 기본 마진 제거 */
+    background-color: #000000; /* 배경 색상 설정 */
+    overflow: hidden;
+}
+
+.typewriter {
+    font-family: 'DungGeunMo', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 100%;
+    margin-left: 128px;
+    margin-top: 111px;
+    color: #7CFC00;
+}
+
+#typed-text {
+    display: inline-block;
+    white-space: pre-wrap; /* 줄 바꿈 허용 */
+    position: relative;
+}
+
+#image {
+    display: none; /* 기본적으로 이미지 숨기기 */
+    margin-top: 20px; /* 텍스트와 이미지 간격 조정 */
+    max-width: 100%; /* 이미지의 최대 너비 조정 */
+}
+
+#loading {
+    font-family: 'DungGeunMo', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* 배경을 어둡게 */
+    color: white; /* 텍스트 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* 텍스트 크기 조정 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 */
+}
+
+#loading-text {
+    font-size: 24px; /* 텍스트 크기 조정 */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #7CFC00; }
+}
+
+.typewriter #typed-text {
+    animation: typing 3s steps(30, end), blink .5s step-end infinite alternate;
+    width: fit-content;
+    overflow: hidden;
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards; /* fadeOut 애니메이션 적용 */
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards; /* fadeIn 애니메이션 적용 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hover {
+    transform: translate(19px); /* 원하는 위치로 조정 */
+}

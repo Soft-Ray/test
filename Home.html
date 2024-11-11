@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Space Laboratory Animals </title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <!-- 배경 음악 추가 -->
+    <audio id="background-music" autoplay loop>
+        <source src="background.mp3" type="audio/mpeg">
+    </audio>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;   
+&lt;meta charset="UTF-8"&gt;    
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;    
+&lt;title&gt; <span class="large-text"> Space Laboratory Animals </span> &lt;/title&gt; &lt;/head&gt;
+    </pre>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="Home.html" class="home-link">Home</a>
+            </li>
+            <li>
+                <a href="main.html" class="main-link">Main animals</a>
+                <div class="main-box box">
+                    <a href="albert2.html"> &nbsp; Albert II</a> <br>
+                    <a href="Laika.html"> &nbsp; Laika</a> <br>
+                    <a href="Félicette.html"> &nbsp; Félicette</a>
+                </div>
+            </li>
+            <li>
+                <a href="Aboutmain.html" class="about-link">About</a>
+                <div class="about-box box">
+                    <a href="about1.html"> &nbsp; Experiments_and_reasons</a> <br>
+                    <a href="about2.html"> &nbsp; Experiment_details</a> <br>
+                    <a href="about3.html"> &nbsp; After_story</a>
+                </div>
+            </li>
+            <li>
+                <a href="etc1.html" class="etc-link">etc.</a>
+                <a href="etc1.html" class="etc-link">
+                    <div class="etc-box box"> Monkey <br> Chimpanzee <br> Dog <br> Cat <br> Other </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelectorAll('nav ul li').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                clearTimeout(item.timeoutId);
+                item.classList.add('hover');
+            });
+            item.addEventListener('mouseout', () => {
+                item.timeoutId = setTimeout(() => {
+                    item.classList.remove('hover');
+                }, 1000);
+            });
+        });
+
+        // 배경 음악의 소리 줄이기
+        const backgroundMusic = document.getElementById("background-music");
+        backgroundMusic.volume = 0.2;  // 소리 20%로 줄이기
+    </script>
+    
+</body>
+</html>

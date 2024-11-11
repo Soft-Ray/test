@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Laboratory Animals</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+    <div class="albert2" id="movable">
+        <nav class="navbar">
+            <h1>Main Animal.exe</h1>
+            <ul class="icon-nav">
+                <li><a href="Home.html"><img src="minus.png" alt="Minus Icon"></a></li>
+                <li><a href="Home.html"><img src="close.png" alt="Close Icon"></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="image-container">
+                <a href="albert2.html"><img src="albert2.png" class="image1"></a>
+            </div>
+            <div class="image-container">
+                <a href="Laika.html"><img src="laika2.png" class="image2"></a>
+            </div>
+            <div class="image-container">
+                <a href="Félicette.html"><img src="fe2.png" class="image3"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const movable = document.getElementById("movable");
+
+        function centerElement() {
+            // 화면의 크기와 요소 크기 계산
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const elementWidth = movable.offsetWidth;
+            const elementHeight = movable.offsetHeight;
+
+            // 가운데 위치 설정
+            const centerX = (windowWidth - elementWidth) / 2;
+            const centerY = (windowHeight - elementHeight) / 2;
+
+            movable.style.left = centerX + 'px';
+            movable.style.top = centerY + 'px';
+        }
+
+        // 페이지 로드 시 센터에 배치
+        window.onload = centerElement;
+
+        // 창 크기 변경 시에도 센터로 재배치
+        window.onresize = centerElement;
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        movable.onmousedown = function(event) {
+            isDragging = true;
+            // 클릭한 곳과 요소의 거리 계산
+            offsetX = event.clientX - movable.getBoundingClientRect().left;
+            offsetY = event.clientY - movable.getBoundingClientRect().top;
+
+            movable.style.position = 'absolute';
+            movable.style.zIndex = 1000; // 다른 요소 위로 오게 설정
+        };
+
+        document.onmousemove = function(event) {
+            if (isDragging) {
+                // 마우스 위치를 기준으로 요소 이동
+                movable.style.left = event.clientX - offsetX + 'px';
+                movable.style.top = event.clientY - offsetY + 'px';
+            }
+        };
+
+        document.onmouseup = function() {
+            isDragging = false;
+        };
+
+        // 기본 드래그 방지
+        movable.ondragstart = function() {
+            return false;
+        };
+    </script>
+</body>
+</html>

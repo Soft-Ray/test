@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    cursor: url('Group.png'), auto;
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: #000000;
+    color: #7CFC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.albert2 {
+    width: 1530px;
+    height: 880px;
+    border: 5px solid #7CFC00;
+    background: #0C1900;
+    text-align: center;
+    border-top: 80px #7CFC00 solid;
+    position: relative;
+    display: flex; /* 수직 및 수평 정렬을 위해 flex 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    padding-bottom: 40px;
+}
+
+.navbar {
+    position: absolute;
+    top: -75px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.navbar h1 {
+    color: #000000; /* Change the font color to black */
+    font-size: 45px;
+    margin-left: 20px;
+    font-weight: 100;
+}
+
+.icon-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.icon-nav li {
+    margin: 0 10px; /* 아이콘 사이 간격 조정 */
+}
+
+.icon-nav li a img {
+    width: 40px; /* 아이콘 크기 조정 */
+    height: 40px;
+}
+
+.content {
+    display: flex; /* 이미지를 왼쪽으로, 박스를 오른쪽으로 정렬 */
+    align-items: flex-start; /* 수직 정렬 */
+}
+
+.image {
+    width: 600px;
+    height: 800px;
+    object-fit: contain;
+    display: block;
+    margin-top: 40px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    margin-left: 30px; /* 이미지와 박스 간 간격 */
+    margin-top: 40px;
+}
+
+.box1 {
+    width: 650px; /* 박스 너비 */
+    height: 120px; /* 박스 높이 */
+    background-color: #224600;
+    margin-bottom: 60px; /* 박스 간격 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px; /* 텍스트 크기 */
+    color: #7CFC00; /* 텍스트 색상 */
+    gap: 66px;
+}
+
+.box2 {
+    width: 600px; /* 박스 너비 */
+    height: 440px; /* 박스 높이 */
+    background-color: #0C1900;
+    border: 5px solid #7CFC00; /* 박스 테두리 */
+    margin-bottom: 40px; /* 박스 간격 */
+    display: flex;
+    justify-content: center; /* 왼쪽 정렬 */
+    align-items: flex-start; /* 상단 정렬 */
+    padding: 20px; /* 내부 패딩 */
+    font-size: 45px; 
+}
+
+.box2-content {
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: flex-start; /* 텍스트 왼쪽 정렬 */
+}
+
+.box2-content div {
+    margin-bottom: 15px; /* 항목 간 간격 */
+}
+
+.box-in { 
+    width: 500px; /* 박스 너비 */
+    height: 200px; /* 박스 높이 */
+    background-color: #224600;
+    padding: 20px;
+    font-size: 28px;
+}
+
+.box3 {
+    width: 650px; /* 박스 너비 */
+    height: 90px; /* 박스 높이 */
+    background-color: #7CFC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px; /* 텍스트 크기 */
+    color: #000000; /* 텍스트 색상 */
+}
