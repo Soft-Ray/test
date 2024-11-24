@@ -7,6 +7,9 @@
 
 * {
     cursor: url('Group.png'), auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,23 +21,26 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 .albert2 {
     width: 1530px;
-    height: 880px;
+    height: 970px;
     border: 5px solid #7CFC00;
+    border-top: 65px solid #7CFC00;
     background: #0C1900;
     text-align: center;
-    border-top: 80px #7CFC00 solid;
-    position: absolute; /* 화면 내에서 절대 위치 조정 */
-    left: 50px; /* 초기 위치 */
-    top: 50px; /* 초기 위치 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 40px;
+    transform: scale(0.75);
+    transform-origin: top left; /* 스케일 조정 기준점 */
+    position: absolute;
+    padding-top: 40px;
 }
 
 .navbar {
@@ -49,7 +55,7 @@ body {
 }
 
 .navbar h1 {
-    color: #000000; /* Change the font color to black */
+    color: #000000;
     font-size: 45px;
     margin-left: 20px;
     font-weight: 100;
@@ -63,45 +69,22 @@ body {
 }
 
 .icon-nav li {
-    margin: 0 10px; /* 아이콘 사이 간격 조정 */
+    margin: 0 10px;
 }
 
 .icon-nav li a img {
-    width: 40px; /* 아이콘 크기 조정 */
+    width: 40px;
     height: 40px;
 }
 
 .content {
-    display: flex; /* 이미지를 왼쪽으로, 박스를 오른쪽으로 정렬 */
-    align-items: flex-start; /* 수직 정렬 */
+    display: flex;
+    align-items: flex-start;
     width: 100%;
 }
 
 .image1, .image2, .image3 {
-    position: relative; /* 드래그를 위해 relative 설정 */
-    width: 480px;
-    height: 800px;
-    margin-top: 40px;
-    margin-left: 22px;
-}
-
-.image1 {
-    width: 480px;
-    height: 800px;
-    margin-top: 40px;
-    margin-left: 22px;
-}
-
-.image2 {
-    width: 480px;
-    height: 800px;
-    margin-top: 40px;
-    margin-left: 22px;
-}
-
-.image3 {
-    width: 480px;
-    height: 800px;
-    margin-top: 40px;
-    margin-left: 22px;
+    position: relative;
+    width: 506.5px;
+    height: 900px;
 }
