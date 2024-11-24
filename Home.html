@@ -7,11 +7,6 @@
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-    <!-- 배경 음악 추가 -->
-    <audio id="background-music" autoplay loop>
-        <source src="background.mp3" type="audio/mpeg">
-    </audio>
-
     <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -52,6 +47,27 @@
     </nav>
 
     <script>
+        // 배경 음악 추가 및 설정
+// 버튼 클릭으로 배경 음악 시작
+const audio = new Audio("background.mp3");
+audio.loop = true;
+audio.volume = 0.2;
+
+document.addEventListener("click", () => {
+    audio.play().catch(error => {
+        console.warn('음악 재생 실패:', error);
+    });
+});
+
+
+        // 페이지가 로드되면 음악 재생 시작
+        window.addEventListener('load', () => {
+            audio.play().catch(error => {
+                console.warn('자동 재생이 차단되었습니다. 사용자가 상호작용 시 재생됩니다.', error);
+            });
+        });
+
+        // 네비게이션 효과
         document.querySelectorAll('nav ul li').forEach(item => {
             item.addEventListener('mouseover', () => {
                 clearTimeout(item.timeoutId);
@@ -63,11 +79,6 @@
                 }, 1000);
             });
         });
-
-        // 배경 음악의 소리 줄이기
-        const backgroundMusic = document.getElementById("background-music");
-        backgroundMusic.volume = 0.2;  // 소리 20%로 줄이기
     </script>
-    
 </body>
 </html>
