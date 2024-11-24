@@ -76,46 +76,6 @@
             <div class="box2"><a href="Aboutmain.html">Back</a></div>
         </div>
     </div>
-
-
-    <script>
-        // 스크롤 애니메이션 제어
-        const scrollItems = document.querySelectorAll('.scroll-item');
-        
-        let lastVisibleIndex = -1; // 마지막으로 표시된 인덱스
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const currentIndex = Array.from(scrollItems).indexOf(entry.target);
-                    if (currentIndex > lastVisibleIndex) {
-                        entry.target.classList.add('visible');
-                        lastVisibleIndex = currentIndex;
-                    }
-                }
-            });
-        }, { threshold: [0.1, 0.25, 0.5] }); // 다양한 노출 단계를 추가
-        
-        scrollItems.forEach((item) => {
-            observer.observe(item);
-        });
-        
-        // 새로운 방식: 반복해서 스크롤 효과가 나타나게 하기 위해
-        const repeatObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // 요소가 다시 화면에 나타날 때마다 애니메이션을 실행하도록 unobserve를 제거
-                } else {
-                    entry.target.classList.remove('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '50px 0px' }); // 10% 이상 보이면 트리거
-        
-        scrollItems.forEach((item) => {
-            repeatObserver.observe(item); // 반복 관찰
-        });
-        </script>
         
 </body>
 </html>
