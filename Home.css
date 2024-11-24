@@ -7,7 +7,6 @@
 * {
     cursor: url('Group.png'), auto;
 }
-
 body {
     background-color: #000000;
     color: #7CFC00;
@@ -15,11 +14,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* 세로로 중앙 정렬 */
     transform: scale(0.75); /* 75%로 축소 */
     transform-origin: top left; /* 축소 기준점을 좌측 상단으로 설정 */
     width: 133.33%; /* 축소로 인해 발생하는 여백 보정 */
     height: 133.33%; /* 축소로 인해 발생하는 여백 보정 */
     overflow: hidden; /* 화면 넘침 방지 */
+    min-height: 100vh; /* 화면 크기 부족 시 중앙 유지 */
+    margin: 0; /* 여백 제거 */
 }
 
 nav ul {
